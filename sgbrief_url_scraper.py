@@ -4,7 +4,11 @@ import re
 import time
 import pickle
 
-## As set up right now, this script will search for briefs from specified October Terms. The Supreme Court divides up its years into October Terms, which is simply the term that starts with the Court's first October sitting (where they're coming back from a lengthy summer vacation). So searching for briefs from "2005" will return briefs that were filed during the year starting in October 2005. (OT 2005 was a particular exciting term, as it was the first term of Chief Justice Roberts and Justice Alito!)
+## As set up right now, this script will search for briefs from specified October Terms. The Supreme Court divides up its
+## years into October Terms, which is simply the term that starts with the Court's first October sitting (where they're
+## coming back from a lengthy summer vacation). So searching for briefs from "2005" will return briefs that were filed during
+## the year starting in October 2005. (OT 2005 was a particular exciting term, as it was the first term of Chief Justice
+## Roberts and Justice Alito!)
 
 pdf_links = []
 
@@ -13,7 +17,9 @@ pdf_links = []
 year_start = 2000  
 year_stop = 2017   
 
-# Loops through every year you picked, printing which year you're on as you go. This searches the SG's website for all the briefs from a particular term, downloads the HTML of the search results, and collects a list of links to PDF files contained on those pages. It stops when it reaches a page with no PDF links.
+# Loops through every year you picked, printing which year you're on as you go. This searches the SG's website for all
+# the briefs from a particular term, downloads the HTML of the search results, and collects a list of links to PDF files
+# contained on those pages. It stops when it reaches a page with no PDF links.
 
 for i in list(range(year_start,year_stop)):
     pdf_count = 1  ## hacky way to make sure the loop below actually starts
